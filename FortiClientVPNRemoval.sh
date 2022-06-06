@@ -1,9 +1,9 @@
 #!/bin/bash
 
 # Name: FortiClientVPNRemoval.sh
-# Date: 05-29-2022
-# Author: Michael Permann
-# Version: 1.0
+# Version: 1.0.1
+# Created: 05-29-2022 by Michael Permann
+# Modified: 06-06-2022
 # Purpose: Removes the FortiClient VPN software.
 
 CURRENT_USER=$(scutil <<< "show State:/Users/ConsoleUser" | awk '/Name :/ && ! /loginwindow/ { print $3 }')
