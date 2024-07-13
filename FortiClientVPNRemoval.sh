@@ -1,14 +1,14 @@
 #!/bin/bash
 
 # Name: FortiClientVPNRemoval.sh
-# Version: 1.0.2
+# Version: 1.0.3
 # Created: 05-29-2022 by Michael Permann
-# Modified: 06-09-2022
+# Modified: 07-13-2024
 # Purpose: Removes the FortiClient VPN software.
 
 CURRENT_USER=$(scutil <<< "show State:/Users/ConsoleUser" | awk '/Name :/ && ! /loginwindow/ { print $3 }')
 USER_ID=$(/usr/bin/id -u "$CURRENT_USER")
-LOGO="/Library/Application Support/HeartlandAEA11/Images/HeartlandLogo@512px.png"
+LOGO="/Library/Management/PCC/Images/PCC1Logo@512px.png"
 JAMF_HELPER="/Library/Application Support/JAMF/bin/jamfHelper.app/Contents/MacOS/jamfHelper"
 JAMF_BINARY=$(which jamf)
 TITLE="Restart Needed"
